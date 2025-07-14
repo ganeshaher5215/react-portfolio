@@ -1,0 +1,17 @@
+.about-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 0.5rem auto;
+  object-fit: cover;
+}
+/* Add responsive styles and section spacing here */
