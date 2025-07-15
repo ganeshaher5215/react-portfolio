@@ -1,26 +1,29 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import Skills from './pages/Skills';          // ✅ Import Skills
 import Projects from './pages/Projects';
+import Education from './pages/Education';    // ✅ Import Education
+import Certifications from './pages/Certifications'; // ✅ Import Certifications
 import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
       <div className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* 🟢 Redirect any unknown path to Home */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+        <Home />
+        <About />
+        <Skills />           {/* 🆕 Skills Section */}
+        <Projects />
+        <Education />        {/* 🆕 Education Section */}
+        <Certifications />   {/* 🆕 Certifications Section */}
+        <Contact />
       </div>
-    </Router>
+      <Footer />
+    </>
   );
 }
 

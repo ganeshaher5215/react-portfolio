@@ -1,0 +1,18 @@
+.skills-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 1.2rem;
+}

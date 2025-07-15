@@ -10,7 +10,7 @@ export default function About() {
   };
 
   return (
-    <div className="about-container">
+    <section id="about" className="about-container">
       {/* Introduction */}
       <motion.div
         className="intro"
@@ -100,6 +100,6 @@ export default function About() {
           learn, innovate, and contribute to impactful projects globally.
         </p>
       </motion.section>
-    </div>
+    </section>
   );
 }

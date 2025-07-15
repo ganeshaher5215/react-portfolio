@@ -9,6 +9,17 @@ export default function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  // 👇 Custom scroll function with offset
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -80; // Adjust this if your Navbar height is different
+      const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      setIsOpen(false); // Close mobile menu
+    }
+  };
+
   return (
     <motion.nav
       className="navbar"
@@ -17,12 +28,10 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="navbar-container">
-        {/* Unique Name */}
         <div className="navbar-logo">
           <span>Ganesh</span> Aher
         </div>
 
-        {/* Hamburger Icon */}
         <div
           className={`navbar-toggle ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
@@ -32,12 +41,18 @@ export default function Navbar() {
           <span></span>
         </div>
 
-        {/* Navigation Links */}
         <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li onClick={() => { window.scrollTo({ top: 0, behavior: "smooth" });
+               setIsOpen(false);  }}>
+                  Home
+             </li>
+         <li onClick={() => scrollToSection("about")}>About</li>
+<li onClick={() => scrollToSection("skills")}>Skills</li>
+<li onClick={() => scrollToSection("projects")}>Projects</li>
+<li onClick={() => scrollToSection("education")}>Education</li>
+<li onClick={() => scrollToSection("certifications")}>Certifications</li>
+<li onClick={() => scrollToSection("contact")}>Contact</li>
+
         </ul>
       </div>
     </motion.nav>

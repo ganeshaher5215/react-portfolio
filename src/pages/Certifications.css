@@ -1,0 +1,30 @@
+.certifications-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.certifications-section h2 {
+  font-size: 2rem;
+  color: #ff9800;
+  margin-bottom: 1.2rem;
+}
+
+.certifications-list {
+  list-style-type: disc;
+  padding-left: 1.5rem; /* Fix bullet alignment */
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.certifications-list li {
+  margin-bottom: 0.6rem;
+  line-height: 1.5;
+}
+
+.certifications-list li::marker {
+  color: #ff9800; /* Optional: style the bullet */
+}
